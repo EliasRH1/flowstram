@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/nicehash/tauri/refs/heads/dev/crates/tauri-config-schema/schema.json",
   "productName": "FlowStream",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "identifier": "com.flowstream.app",
   "build": {
     "frontendDist": "../dist",
@@ -12,9 +12,9 @@
   "app": {
     "windows": [
       {
-        "title": "FlowStream",
-        "width": 1100,
-        "height": 720,
+        "title": "FlowStream - Películas en Español",
+        "width": 1200,
+        "height": 800,
         "minWidth": 800,
         "minHeight": 500,
         "resizable": true,
