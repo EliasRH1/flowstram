@@ -35,7 +35,7 @@ function toast(message, type = 'success') {
 }
 
 // ============ MIRU/JIRUHUB EXTENSION RUNTIME ============
-class MiruExtension {
+class Extension {
   async request(path, options = {}) {
     let url = path;
     if (options.headers && options.headers['Miru-Url']) {
@@ -77,7 +77,7 @@ class MiruExtension {
 }
 
 // Hacer accesible para eval() de extensiones (previene dead-code elimination)
-globalThis.MiruExtension = MiruExtension;
+globalThis.Extension = Extension;
 
 // ============ EXTENSION LOADER ============
 async function loadExtensions() {
@@ -92,7 +92,6 @@ async function loadExtensions() {
         if (code.includes('extends Extension')) {
           // Wrap JiruHub/Miru extensions with runtime
           const wrapped = code
-            .replace('extends Extension', 'extends globalThis.MiruExtension')
             .replace('export default class', 'class');
           const extClass = eval(wrapped);
           const instance = new extClass();
