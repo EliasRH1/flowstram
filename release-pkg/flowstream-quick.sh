@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+[ -z "$HOME" ] && HOME=$(getent passwd $(id -u) | cut -d: -f6)
+[ -z "$HOME" ] && HOME=~
+
 REPO="EliasRH1/flowstram"
 VERSION="v1.0.1"
 URL="https://github.com/$REPO/releases/download/$VERSION/flowstream.tar.gz"
