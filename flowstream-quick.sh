@@ -2,7 +2,7 @@
 set -e
 
 REPO="EliasRH1/flowstram"
-VERSION="v0.1.0"
+VERSION="v1.0.1"
 URL="https://github.com/$REPO/releases/download/$VERSION/flowstream.tar.gz"
 
 RED='\033[0;31m'; GREEN='\033[0;32m'; CYAN='\033[0;36m'; NC='\033[0m'
