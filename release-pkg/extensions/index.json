@@ -2,13 +2,13 @@
   {
     "author": "EliasRH1",
     "description": "Películas en español latino - estrenos, acción, comedia, terror y más",
-    "icon": "https://raw.githubusercontent.com/EliasRH1/flowstram/main/icons/flowstream.png",
+    "icon": "https://raw.githubusercontent.com/EliasRH1/flowstram/master/icons/flowstream.png",
     "lang": "es",
     "license": "MIT",
     "name": "CineLatino",
     "package": "cinelatino",
     "type": "bangumi",
-    "url": "https://raw.githubusercontent.com/EliasRH1/flowstram/main/extensions/cinelatino.js",
+    "url": "https://raw.githubusercontent.com/EliasRH1/flowstram/master/extensions/cinelatino.js",
     "version": "v1.0.0",
     "webSite": "https://github.com/EliasRH1/flowstram"
   }
