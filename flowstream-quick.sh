@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-REPO="tuusuario/flowstream"
+REPO="EliasRH1/flowstram"
 VERSION="v0.1.0"
 URL="https://github.com/$REPO/releases/download/$VERSION/flowstream.tar.gz"
 
