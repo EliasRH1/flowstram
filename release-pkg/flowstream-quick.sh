@@ -32,14 +32,18 @@ if [ -n "$MISSING" ]; then
 fi
 echo -e "  ${GREEN}✓ OK${NC}"
 
-# 2. Elegir modo
-echo ""
-echo -e "${CYAN}[2/4] Modo de instalación:${NC}"
-echo "  1) Sistema (/usr/local/bin) — sudo"
-echo "  2) Usuario (~/.local/bin)"
-echo "  3) Solo descargar"
-read -p "Opción [1-3] (default: 2): " MODO
-MODO=${MODO:-2}
+# 2. Elegir modo (con /dev/tty para compatibilidad con curl|bash)
+if [ -t 0 ]; then
+  echo ""
+  echo -e "${CYAN}[2/4] Modo de instalación:${NC}"
+  echo "  1) Sistema (/usr/local/bin) — sudo"
+  echo "  2) Usuario (~/.local/bin)"
+  echo "  3) Solo descargar"
+  read -p "Opción [1-3] (default: 2): " MODO
+  MODO=${MODO:-2}
+else
+  MODO=2
+fi
 
 # 3. Descargar
 echo ""
